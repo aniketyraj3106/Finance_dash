@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:check": "npm run build && echo '✅ Build successful!'",
+    "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "type-check": "tsc --noEmit",
+    "validate": "npm run type-check && npm run build:check"
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -1,0 +1,17 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "env": {
+    "VITE_APP_TITLE": "Finance Dashboard",
+    "NODE_ENV": "production"
+  },
+  "installCommand": "npm ci",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/:path((?!.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
